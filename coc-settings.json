@@ -1,3 +1,6 @@
 {
-	"coc.preferences.maxFileSize": "1MB"
+	"http.proxyStrictSSL":false,
+	"coc.preferences.maxFileSize": "1MB",
+	"explorer.icon.enableVimDevicons": true,
+	"explorer.icon.enableNerdfont": true
 }
