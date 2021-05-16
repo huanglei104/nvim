@@ -4,10 +4,9 @@ call plug#begin('~/.config/nvim/plugins')
 	Plug 'honza/vim-snippets'
 	Plug 'preservim/nerdcommenter'
 	Plug 'ntpeters/vim-better-whitespace'
-	Plug 'mhartington/oceanic-next'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'lfv89/vim-interestingwords'
 	Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+	Plug 'tomasr/molokai'
 call plug#end()
 
 "common setting
@@ -25,7 +24,7 @@ augroup OnlyCursorLine
   autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
 augroup END
-colorscheme OceanicNext
+colorscheme molokai
 
 "airline settings
 let g:airline_extensions = ['coc', 'tabline', 'quickfix']
@@ -33,7 +32,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_tabs = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#formatter = 'short_path'
-let g:airline_theme='oceanicnextlight'
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -71,14 +69,6 @@ let g:coc_global_extensions = [
 			\'coc-cmake',
 			\'coc-sh'
 			\]
-
-"interestingwords setting
-let g:interestingWordsRandomiseColors = 1
-nnoremap <silent>* :call InterestingWords('n')<cr>
-nnoremap <silent><leader>* :call UncolorAllWords()<cr>
-nnoremap <silent>n :call WordNavigation(1)<cr>
-nnoremap <silent>N :call WordNavigation(0)<cr>
-
 
 let g:Lf_UseCache = 0
 let g:Lf_UseMemoryCache = 0
