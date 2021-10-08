@@ -32,6 +32,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_tabs = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#formatter = 'short_path'
+let g:airline_section_z='%l/%L(%p%%):%v'
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
